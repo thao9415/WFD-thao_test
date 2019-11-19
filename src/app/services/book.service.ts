@@ -29,7 +29,7 @@ export class BookService {
     return this.http.post<Book>(this.API_URL, book);
   }
 
-  editBook(id: number, book: Partial<Book>): Observable<Book> {
+  editBook(id:number, book: Partial<Book>): Observable<Book> {
     // return this.http.put<Book>(`http://localhost:3000/books/${id}`, book);
     return this.http.put<Book>(`${this.API_URL}/${book.id}`, book);
   }
@@ -37,5 +37,8 @@ export class BookService {
   deleteBook(id: number): Observable<Book> {
     return this.http.delete<Book>(`${this.API_URL}/${id}`);
     // return this.http.delete<Book>(`http://localhost:3000/books/${id}`);
+  }
+  updateBook(book: Book): Observable<Book> {
+    return this.http.put<Book>(`${this.API_URL}/${book.id}`, book);
   }
 }

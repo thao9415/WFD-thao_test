@@ -11,14 +11,14 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 })
 export class EditComponent implements OnInit {
   book: Book;
-  subcription: Subscription;
+  subscription: Subscription;
   message: string;
 
   constructor(private bookService: BookService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.subcription = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+    this.subscription = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
       this.bookService.bookDetail(id).subscribe(next => {
         this.book = next;

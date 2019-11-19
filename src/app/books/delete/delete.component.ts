@@ -31,9 +31,9 @@ export class DeleteComponent implements OnInit {
   delete() {
     console.log(this.book.id);
     this.bookService.deleteBook(this.book.id).subscribe(next => {
-      this.message = 'Đã xóa sách';
+      this.message = 'Successfully';
     }, error => {
-      this.message = 'Xóa Không Thành Công';
+      this.message = 'Errors';
     });
   }
 }
