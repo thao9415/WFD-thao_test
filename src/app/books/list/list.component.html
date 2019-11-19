@@ -1,0 +1,24 @@
+
+<router-outlet></router-outlet>
+<h1>My Awesome List</h1>
+<table class="table table-bordered ">
+  <thead class="thead-dark">
+
+
+  <tr>
+    <th scope="col">Tag</th>
+    <th scope="col">URL</th>
+    <th scope="col">Description</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tr *ngFor="let book of bookList">
+    <td>{{ book.tag}}</td>
+    <td>{{ book.url}}</td>
+    <td>{{ book.descriptions}}</td>
+    <td><a [routerLink]="['edit',book.id]">Edit</a></td>
+    <td><a [routerLink]="['delete',book.id]">Delete</a></td>
+  </tr>
+</table>
+

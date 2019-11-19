@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.full-content{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+th {
+  width: 15%;
+}

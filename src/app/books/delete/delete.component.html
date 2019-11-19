@@ -1,0 +1,26 @@
+<div class="full-content">
+  <p>Are you sure delete awesome : <u class="text-danger">{{book.url}}</u></p>
+  <div *ngIf="message">
+    <p style="color: red">{{ message }} : <u class="text-danger">{{book.url}}</u></p>
+  </div>
+  <table class="table table-bordered">
+    <tr>
+      <th><p>Tag : </p></th>
+      <td>{{book.tag}}</td>
+    </tr>
+    <tr>
+      <th><p>URL : </p></th>
+      <td>{{book.url}}</td>
+    </tr>
+    <tr>
+      <th><p>Description : </p></th>
+      <td>{{book.descriptions}}</td>
+    </tr>
+  </table>
+  <input type="button" value="Delete" class="btn btn-danger" style="margin-left: 60px" (click)="delete()">
+  <button type="button" value="Back" class="btn btn-dark"
+          style="margin-left: 20px;"
+          [routerLink]="['/list']">Back
+  </button>
+</div>
+
