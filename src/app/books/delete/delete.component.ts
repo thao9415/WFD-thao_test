@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Book} from '../../interface/book';
+import {Awesome} from '../../interface/awesome';
 import {Subscription} from 'rxjs';
-import {BookService} from '../../services/book.service';
+import {AwesomeService} from '../../services/awesome.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
@@ -10,11 +10,11 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent implements OnInit {
-  book: Book;
+  book: Awesome;
   subcription: Subscription;
   message: string;
 
-  constructor(private bookService: BookService, private activatedRoute: ActivatedRoute) {
+  constructor(private bookService: AwesomeService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {

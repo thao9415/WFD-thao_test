@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Book} from '../../interface/book';
+import {Awesome} from '../../interface/awesome';
 import {Subscription} from 'rxjs';
-import {BookService} from '../../services/book.service';
+import {AwesomeService} from '../../services/awesome.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
@@ -10,11 +10,11 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  book: Book;
+  book: Awesome;
   subscription: Subscription;
   message: string;
 
-  constructor(private bookService: BookService, private activatedRoute: ActivatedRoute) {
+  constructor(private bookService: AwesomeService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -22,6 +22,7 @@ export class EditComponent implements OnInit {
       const id = paramMap.get('id');
       this.bookService.bookDetail(id).subscribe(next => {
         this.book = next;
+        console.log(this.book);
       }, error => {
         console.log(error);
       });

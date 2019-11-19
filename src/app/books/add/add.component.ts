@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BookService} from '../../services/book.service';
+import {AwesomeService} from '../../services/awesome.service';
 
 @Component({
   selector: 'app-add',
@@ -9,7 +9,7 @@ import {BookService} from '../../services/book.service';
 export class AddComponent implements OnInit {
   message = '';
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: AwesomeService) {
   }
 
   ngOnInit() {

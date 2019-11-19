@@ -5,29 +5,21 @@
   <form #bookForm="ngForm" (ngSubmit)="edit(bookForm)">
     <div class="form-group">
       <label>Tag: </label>
-      <input value=" {{this.book.tag}}" name="title" type="text" class="form-control" placeholder="Tag" ngModel="">
-
-
+      <input name="tag" type="text" class="form-control"  ngModel>
     </div>
     <div class="form-group">
       <label>URL: </label>
-      <input value=" {{this.book.url}}" name="author" type="text" class="form-control" placeholder="URL" ngModel="">
+      <input name="url" type="text" class="form-control" ngModel>
     </div>
-
 
     <div class="form-group">
-      <label>Description: </label>
-      <textarea value=" {{this.book.descriptions}}" type="text" name="description" placeholder="description" class="form-control" rows="4"
-                ngModel=""></textarea>
+      <label>Description </label>
+      <textarea type="text" name="descriptions" class="form-control" rows="4"
+                ngModel></textarea>
     </div>
     <div>
-      <button type="submit" class="btn btn-dark" style="margin: auto">Edit</button>
-      <button type="button" value="Back" class="btn btn-dark"
-              style="margin-left: 20px;"
-              [routerLink]="['/list']">Back
-      </button>
+      <button type="submit" class="btn badge-dark" style="margin: auto">Add</button>
     </div>
-
   </form>
 </div>
 <router-outlet></router-outlet>
